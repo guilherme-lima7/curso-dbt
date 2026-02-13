@@ -33,4 +33,5 @@ models:
   parte2:
     # Config indicated by + and applies to all files under models/example/
     example:
+      +schema: meuschema
       +materialized: view
