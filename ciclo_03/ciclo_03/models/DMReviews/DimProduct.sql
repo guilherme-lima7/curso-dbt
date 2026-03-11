@@ -1,4 +1,4 @@
 select distinct
 	"ProductId" as product_id,
-	'ABC' as product_name
-from "ciclo_03_StgReviews"."Reviews"
+	md5(random()::text) as product_name
+from {{ source('StgReviews', 'reviews') }} -- from "ciclo_03_StgReviews".Reviews r

@@ -1,0 +1,24 @@
+version: 2
+
+exposures:
+
+  - name: reviews_reporting
+    label: Report de reviews
+    type: dashboard
+    maturity: high
+    url: https://bi.tool/dashboards/1
+    description: >
+      Olá mundo!
+
+    depends_on:
+      - ref('ReportReviews')
+      - ref('FactReview')
+      - ref('DimProduct')
+      - ref('DimUser')
+      - ref('DimReviewText')
+      - sources('StgReviews', 'reviews')
+
+    owner:
+      name: Guilherme Lima
+      email: guilherme@hotmail.com
+ 

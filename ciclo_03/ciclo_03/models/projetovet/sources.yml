@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: StgLaudo
+    schema: ciclo_03_StgReviews
+    tables:
+      - name: laudos

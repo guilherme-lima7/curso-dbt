@@ -1,5 +1,5 @@
-select 
+select distinct
 	"Id" as review_id,
-	"Summary" as summary,
-	"Text" as text
-from "ciclo_03_StgReviews"."Reviews"
+	upper(trim("Summary")) as summary,
+	upper(trim("Text")) as long_text
+from {{ source('StgReviews', 'reviews') }} -- from "ciclo_03_StgReviews".Reviews r

@@ -37,5 +37,10 @@ seeds:
 models:
   ciclo_03:
     DMReviews:
+      +database: dw_hb35
       +schema: DMReviews
+      +materialized: view
+    projetovet:
+      +database: dw_hb35
+      +schema: DMLaudo
       +materialized: view
